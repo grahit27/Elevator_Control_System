@@ -1,0 +1,143 @@
+Enter Number of Elevators- 2
+Elevator 0 start with 0 in ELEVATOR_NONE
+Elevator 1 start with 0 in ELEVATOR_NONE
+Enter Number of Requests- 3
+Request Number = 1
+Enter Source Floor- 1
+Enter Destination Floor- 4
+Request Sent from Floor-> 1 to Floor-> 4
+Request Accepted 1 -> 4 by Elevator 0
+Request for Up
+Request Number = 2
+Enter Source Floor- 6
+Enter Destination Floor- 4
+Request Sent from Floor-> 6 to Floor-> 4
+Request Accepted 6 -> 4 by Elevator 1
+Request for Down
+Request Number = 3
+Enter Source Floor- 2
+Enter Destination Floor- 5
+Request Sent from Floor-> 2 to Floor-> 5
+*** Request Distribution ***
+Elevator[0] - 4
+Elevator[1] - 2
+------------------------
+*** Stepping simulation ***
+Time = 0
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 1
+Elevator[1] - Current Floor 1
+Time = 1
+Elevator 0 reached UP desired floor.
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 1
+Elevator[1] - Current Floor 2
+Time = 2
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 2
+Elevator[1] - Current Floor 3
+Time = 3
+Elevator 0 reached UP desired floor.
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 2
+Elevator[1] - Current Floor 4
+Time = 4
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 3
+Elevator[1] - Current Floor 5
+Time = 5
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 4
+Elevator[1] - Current Floor 6
+Time = 6
+Elevator 0 reached UP desired floor.
+Elevator 1 reached UP desired floor.
+Elevator 1 UP tree set becomes Empty.
+Elevator 1 going UP will now serve DOWN request
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 4
+Elevator[1] - Current Floor 5
+Time = 7
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 5
+Elevator[1] - Current Floor 4
+Time = 8
+Elevator 0 reached UP desired floor.
+Elevator 0 UP tree set becomes Empty.
+Elevator 1 DOWN tree set becomes Empty.
+Want to ADD Request press 1 else 0
+0
+0Elevator[0] - Current Floor 5
+Elevator[1] - Current Floor 4
+Time = 9
+Want to ADD Request press 1 else 0
+
+0Elevator[0] - Current Floor 4
+Elevator[1] - Current Floor 3
+Time = 10
+Want to ADD Request press 1 else 0
+
+0Elevator[0] - Current Floor 3
+Elevator[1] - Current Floor 2
+Time = 11
+Want to ADD Request press 1 else 0
+
+Elevator[0] - Current Floor 2
+Elevator[1] - Current Floor 1
+Time = 12
+Want to ADD Request press 1 else 0
+0
+0Elevator[0] - Current Floor 1
+Elevator[1] - Current Floor 0
+Time = 13
+Elevator 1 DOWN tree set becomes Empty.
+Request fulfilled reached 0th floor by Elevator 1
+Want to ADD Request press 1 else 0
+
+Elevator[0] - Current Floor 0
+Elevator[1] - Current Floor 0
+Time = 14
+Elevator 0 DOWN tree set becomes Empty.
+Request fulfilled reached 0th floor by Elevator 0
+Want to ADD Request press 1 else 0
+0
+Elevator[0] - Current Floor 0
+Elevator[1] - Current Floor 0
+------------------------
+*** Final Output simulation ***
+Elevator[0] - Current Floor 0
+Elevator[1] - Current Floor 0
+
+
+
+Explanantion:
+2 Elevators are initialised
+1st Elevator got 1->4 request
+2nd Elevator got 6->4 request
+3rd Request is taken by Elevator 0 2->5 as 1st is also going UP 
+
+Elevator 0 	1
+	1	1
+	1	2 (Pickup from 1 by Elevator 0 1st Req)
+	2	3
+	2	4 (Pickup from 2 by Elevator 0 3rd Req)
+	3	5
+	4	6 (Pickup 6th By Elevator 1 , 2nd Req) 
+	4	5 (Drop of 1st req 1->4)
+	5	4 
+	5	4 (Drop of 3rd Request 2->5) && (Drop of 6->4 Request)
+	4	3
+	3	2
+	2	1
+	1	0
+	0	0
+	0	0 (Basement reach Quit execution)	
+	  	
